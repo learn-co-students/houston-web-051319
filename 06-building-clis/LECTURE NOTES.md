@@ -2,14 +2,15 @@
 
 
 ### Resources
-* _
+* <https://github.com/Joshua-Miles/building-clis-lecture-exercises>
 
 
 ### Learning Goals
 
 * Employ single responsibility methods to abstract repetitive code 
 * Use macros and implicit self to write more consice code
-* 
+* Use Bundler to Manage Project Dependencies 
+* Use TTY Prompt to build Command Line Interfaces
 
 
 ### Activation
@@ -97,7 +98,16 @@
 
 ##### Demonstrate
 
-- 
+```ruby
+ability = prompt.select('Ability', Ability.all.map do | ability |
+    {
+        value: ability,
+        name: ability.label
+    }
+end)
+```
+
+
 
 ##### Vocabulary
 

@@ -17,13 +17,16 @@ class Ability
         "#{self.name} (#{self.cool_factor})"
     end
 
-    def name
-        @name
-    end
+    
 
-    def name=(value)
-        @name = value
-    end
+    attr_accessor :name
+    # Same As:
+    # def name
+    #     @name
+    # end
+    # def name=(value)
+    #     @name = value
+    # end
 
     def cool_factor
         @cool_factor

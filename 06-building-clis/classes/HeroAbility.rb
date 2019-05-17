@@ -1,5 +1,7 @@
 class HeroAbility 
 
+    attr_reader :hero, :ability
+
     @@all = []
 
     def self.all 
@@ -10,14 +12,6 @@ class HeroAbility
         @hero = hero
         @ability = ability
         @@all << self 
-    end
-
-    def hero 
-        @hero
-    end
-
-    def ability
-        @ability
     end
 
 end
