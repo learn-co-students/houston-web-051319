@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_151923) do
+ActiveRecord::Schema.define(version: 2019_05_24_195324) do
 
   create_table "airlines", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer "traveler_id"
+    t.integer "airline_id"
+    t.index ["airline_id"], name: "index_tickets_on_airline_id"
+    t.index ["traveler_id"], name: "index_tickets_on_traveler_id"
   end
 
   create_table "travelers", force: :cascade do |t|
