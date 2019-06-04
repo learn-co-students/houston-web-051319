@@ -1,0 +1,17 @@
+<h1>Edit Car</h1>
+<form method="POST" action="/cars/<%= @car.id %>">
+    <input type="hidden" name="_method" value="patch" />
+    <div>
+        <label>Make</label>
+        <input name="make" value="<%= @car.make %>" type="text"/>
+    </div>
+        <div>
+        <label>Model</label>
+        <input name="model" value="<%= @car.model %>" type="text"/>
+    </div>
+        <div>
+        <label>Color</label>
+        <input name="color" value="<%= @car.color %>" type="color"/>
+    </div>
+    <button>Submit</button>
+</form>
