@@ -1,0 +1,24 @@
+<h1>Edit Car</h1>
+<form method="POST" action="/cars/<%= @car.id %>">
+    <input type="hidden" name="_method" value="patch" />
+    <div>
+        <label>Make</label>
+        
+    </div>
+        <div>
+        <label>Model</label>
+        <input name="car[model]" value="<%= @car.model %>" type="text"/>
+    </div>
+    <div>
+        <label>Color</label>
+        <input name="car[color]" value="<%= @car.color %>" type="color"/>
+    </div>
+    <div>
+        <label>Drivers</label>
+        <% @drivers.each do | driver | %>
+            <label><%= driver.name %></label>
+            <input name="car[driver_ids][]" value="<%= driver.id%>" type="checkbox"/>
+        <% end %>
+    </div>
+    <button>Submit</button>
+</form>
