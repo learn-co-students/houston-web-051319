@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+
+           .box {
+               display: flex;
+               flex-wrap: wrap;
+           }
+
+           .card {
+               min-width: 150px;
+               flex: 1;
+               padding: 10px;
+               margin: 2;
+               border-style: solid;
+               border-color: black;
+               border-width: 1px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <% @cars.each do | car |  %>
+                <div class="card">
+                    <h3><%="#{car.make.name} #{car.model}" %></h3>
+                    <strong>Color: </strong> <%= car.color %> <br />
+                    <strong>Total Mileage: </strong><%= car.total_mileage %><br />
+                    <%= link_to "-", "/cars/#{car.id}/total_mileage/decrement" %>
+                    <%= link_to "+", "/cars/#{car.id}/total_mileage/increment" %> <br />
+                    <%= link_to "Edit", edit_car_path(car.id), class: 'my-link' %>
+                </div>
+            <% end %>
+        </div>
+    </body>
+</html>
