@@ -1,0 +1,54 @@
+<h1>Edit Car</h1>
+<%= form_with model: @car do | form |  %>
+    <div>
+        <%= form.label :make %>
+        <%= form.collection_select :make_id, @makes, :id, :name %>
+    </div>
+    <div>
+        <%= form.label :model %>
+        <%= form.text_field :model %>
+    </div>
+    <div>
+        <%= form.label :total_mileage %>
+        <%= form.text_field :total_mileage %>
+        <ul>
+        <% @errors["total_mileage"].each do | error_message | %>
+            <li><%= error_message %></li>
+        <% end %>
+        </ul>
+    </div>
+    <div>
+        <%= form.label :color %>
+        <%= form.color_field :color %>
+    </div>
+    <div>
+        <%= form.label :drivers %>
+        <%= form.collection_check_boxes :driver_ids, @drivers, :id, :name %>
+    </div>
+    <%= form.submit %>
+<% end %>
+
+
+<!-- 
+<div>
+        <label>Make</label>
+        <select name="car[make_id]">
+         <% @makes.each do | make | %>
+            <option value="<%= make.id%>"><%= make.name%></option>
+        <% end %>
+        </select>
+    </div>
+
+ <div>
+        <label>Drivers</label>
+        <% @drivers.each do | driver | %>
+            <label><%= driver.name %></label>
+            <% if @car.drivers.include?(driver) %>
+                <input checked name="car[driver_ids][]" value="<%= driver.id%>" type="checkbox"/>
+            <% else %>
+                <input name="car[driver_ids][]" value="<%= driver.id%>" type="checkbox"/>
+            <% end %>
+        <% end %>
+    </div>
+
+-->
