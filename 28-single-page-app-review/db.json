@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maruf"
+    },
+    {
+      "id": 2,
+      "name": "Ariq"
+    }
+  ],
+  "resorts": [
+    {
+      "id": 1,
+      "name": "Bear",
+      "description": "The quick brown fox jumped over the lazy dog",
+      "likes": 0,
+      "comments": [
+        {
+          "message": "It was great",
+          "user_id": 1
+        },
+        {
+          "message": "It sucked",
+          "user_id": 2
+        },
+        {
+          "user_id": 1,
+          "message": "First"
+        },
+        {
+          "user_id": 1,
+          "message": "First"
+        },
+        {
+          "user_id": 1,
+          "message": "Second"
+        },
+        {
+          "user_id": 1,
+          "message": "Whaaaat?"
+        },
+        {
+          "user_id": 1,
+          "message": "Hi!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Philmont Ranch",
+      "description": "The quick brown fox jumped over the lazy dog",
+      "likes": 0,
+      "comments": [
+        {
+          "message": "It was great",
+          "user_id": 2
+        },
+        {
+          "message": "It sucked",
+          "user_id": 1
+        }
+      ]
+    }
+  ]
+}
