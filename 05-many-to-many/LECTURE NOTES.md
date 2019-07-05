@@ -86,64 +86,6 @@
 
 
 
-> Break (0:55)
-
-
-
-### Learning Goal 3: Employ single responsibility methods to abstract repetiscious code 
-
-##### Timestamp: 0:60
-
-##### Demonstrate
-
-- How to abstract code
-- Writing single responsiblity methods
-- We want to be DRY
-
-##### Vocabulary
-
-- Abstraction
-- Single responsibility methods
-- DRY
-
-##### Questions 
-
-##### Check for Understanding
-
-- *Kahoot Quiz:* [1-3]
-
-##### Cue
-
-- So this is one way we can make our code easier to read and to follow in any programming language, lastly let's look at some ways to use some Ruby specific tools for improving our code readability
-
-
-
-### Learning Goal 4: Use macros and implicit self to write more consice code
-
-##### Timestamp: 0:75
-
-##### Demonstrate
-
-- Using implicit self to **read**
-  - Show why we can't use it to set
-- Re-writing getters and setters using macros
-
-##### Vocabulary
-
-- Implicit Self
-- Macros
-  - `attr_reader`
-  - `attr_writer`
-  - `attr_accessor`
-
-##### Questions 
-
-##### Check for Understanding
-
-- *Kahoot Quiz:* [4-6]
-
-
-
 ### Conclusion 
 * You've seen everything on the code challenge
 

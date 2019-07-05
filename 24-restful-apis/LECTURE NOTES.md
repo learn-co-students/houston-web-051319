@@ -61,4 +61,4 @@
 
 #### Check for Understanding: 
 
-* Kahoot [5-7]
+* Kahoot [5-7]s
