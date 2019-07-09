@@ -24,12 +24,20 @@ class PlayableCharacter extends Character {
                 this.walkLeft()
             }
         
+            if(event.key == ' '){
+                this.envokePower()
+            }
         
         })
         
         document.addEventListener('keyup', () => {
             this.stop()
         })
+        
+    }
+
+    envokePower(){
+        window.alert('Boom!')
     }
 
 }   

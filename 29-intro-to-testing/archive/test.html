@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="./src/Character.js"></script>
+    <script src="./src/NonPlayableCharacter.js"></script>
+    <script src="./src/PlayableCharacter.js"></script>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      var expect = chai.expect
+    </script>
+    <script>
+        describe('PlayableCharacter', () => {
+
+            let character = new PlayableCharacter
+
+            it('Creates an object', () => {
+              expect(character).to.be.a('object')
+            })
+
+            it('Can walk right', (done) => {
+              character.walkRight()
+              setTimeout( () => {
+                expect(parseInt(character.element.style.left)).to.be.above(10)
+                done()
+              }, 1000)
+            })
+
+            it('Can walk left', (done) => {
+              character.walkLeft()
+              setTimeout( () => {
+                expect(parseInt(character.element.style.left)).to.be.below(0)
+                done()
+              }, 1100)
+            })
+        })
+    
+    </script>
+    <script class="mocha-exec">
+      mocha.run();
+    </script>
+  </body>
+</html>

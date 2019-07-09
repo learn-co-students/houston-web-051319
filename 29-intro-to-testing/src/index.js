@@ -21,11 +21,15 @@ document.addEventListener('DOMContentLoaded', function(){
         })
 
 
-    let button = document.querySelector('.button')
-    button.addEventListener('click', function(e){
-        e.preventDefault()
-        let speedInput = document.querySelector('.speed-input')
-        speed = parseInt(speedInput.value)
+    let speedInput = document.querySelector('.speed-input')
+    speedInput.addEventListener('change', function(e){        
+        character.speed = parseInt(speedInput.value)
+    })
+
+
+    let abilityDropDown = document.querySelector('.ability-drop-down')
+    abilityDropDown.addEventListener('change', () => {
+        
     })
 
     let saveButton = document.querySelector('.save-button')
@@ -47,16 +51,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 })
 
-// function oneOnOne(x){
-//     Character.all.forEach(function(student){
-//         if(
-//             student.name == x
-//         ){
-//             Character.all.splice(Character.all.indexOf(student), 1)
-//             student.element.remove()
-//         }
-//     })
-// }
 
 function oneOnOne(searchTerm){
     // Remove the element from the page
@@ -67,17 +61,6 @@ function oneOnOne(searchTerm){
     Character.all = Character.all.filter( character => character != student )
 }
 
-// function stillConfused(){
-//     let names = []
-//     Character.all.forEach(function(student){
-//         if(
-//             student instanceof NonPlayableCharacter 
-//         ){
-//             names.push(student.name)
-//         }
-//     })
-//     return names
-// }
 
 let isNonPlayable = (character) => character instanceof NonPlayableCharacter
 let to = (propertyName) => (character) => character[propertyName]
@@ -98,23 +81,3 @@ function groupReview(){
     })
     Character.all = []
 }
-
-
-// array = [ 1, 2, 3, 4, 5 ]
-
-// callback = number => { // => 4
-//     return number > 3 // 4 > 3 => true
-// }
-
-// let find = (array, callback) => {
-//     let result;
-//     for(let index = 0; index < array.length; index++){
-//         index // => 3
-//         array[index] // => 4
-//         if(callback(array[index])){ // true
-//             result = array[index]
-//             break;
-//         }
-//     }
-//     return result
-// }

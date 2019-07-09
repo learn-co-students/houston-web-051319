@@ -1,6 +1,6 @@
 class Character {
 
-    constructor(name, x, y, imgPath){
+    constructor(name, x = 0, y = 0, imgPath= 'green-character'){
 
         this.name = name
 
