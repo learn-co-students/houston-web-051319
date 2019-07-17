@@ -1,40 +1,35 @@
-# Components and Props
+# Inverse Dataflow
+
 
 ### Learning Goals
-
-- Identify the Visual Components of a UI
-- Explain the difference between defining and rendering a 
-- Use props to configure a child component
-- Use the spread operator to pass props to a child component 
+- Changing state in a parent component
+- Declaratively updating state
 
 
-|                                 | Class                                | Function          | Component     |
-| ------------------------------- | ------------------------------------ | ----------------- | ------------- |
-| Sets up a template to use later | Defining                             | Defining          | Defining      |
-| Actually using that template    | Instantiating                        | Invoking          |               |
-| Configuring each instance       | Passing arguments to the constructor | Passing arguments | Passing Props |
-
-
-### Identifing the visual components of a UI
-* Do parts of our UI repeat?
-* DO parts of our UI share common data?
-
-
-**Our applications hierarchy**
+### Component Hierarchy
 * App
-    * Header
-    * DragonList
-        * DragonCard [] 
+    * children
+        * Header 
+        * DragonList
+            * state: 
+                * dragons
+            * children
+                * DragonCard [] 
+                    * props
+                        * name
+                        * description
+                        * image
+                * DragonForm
+                    * state
+                        * dragonName
+                        * dragonImage
 
-#### Think/Pair/Share:
-- Go to youtube.com
-- List out all of the components you can identify in a hierarchy
 
-
-### Explain the difference between defining and rendering a component
-Rules of JSX
-- We interpolate variables with `{}`
-- Using map to iterate
-- Using ternarys to conditionally render
-
-
+### Vocabulary
+* Component hierarchy
+    * The tree of components (who renders who)
+* Parent Component
+    * The component that renders _this_ component
+* Inverse dataflow
+    * Sending data back up the component tree through callbacks
+ 
