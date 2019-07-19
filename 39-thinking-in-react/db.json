@@ -1,0 +1,16 @@
+{
+    "comic-books": [
+        {
+            "id": 1,
+           "name": "The Adventuers of Tintin",
+           "author":"Hérge",
+           "date":"The... 60s?" 
+        },
+        {
+            "id": 2,
+            "name": "Spiderman",
+            "author":"Stan Lee",
+            "date":"A long time ago" 
+        }
+    ]
+}
