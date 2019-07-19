@@ -1,5 +1,6 @@
 # Thinking in React
 
+
 ### Learning Goals
 - Strategically place state
 - Plan the structure/mutations of state
@@ -17,6 +18,7 @@
     - Add a new comic book
     - Delete comic books
     - Edit comic books
+
 
 ## Vocabulary
 - Presentational Components
@@ -39,3 +41,6 @@
                 * ComicBookCard [] 
                     * ComicBookForm
                 * ComicBookForm
+
+
+
