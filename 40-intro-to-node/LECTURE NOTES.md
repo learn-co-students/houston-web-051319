@@ -10,8 +10,6 @@
 
 * Describe the components of the MEAN / MERN stack:
 
-* Create Models in JavaScript with sequelize
-
 * Create Controllers in JavaScript with express
 
 * Discuss the differences in the values of Ruby and JavaScript
@@ -21,6 +19,7 @@
 ### Activation
 
 * We've learned alot about the history of JavaScript over the course of the last five weeks, the last *super* major event came in 2009 with a headless runtime environment that sparked an entirely new development stack
+
 
 
 ### Learning Goal 1: Describe the components of the MEAN / MERN stack
@@ -47,34 +46,6 @@
 
 
 
-### Learning Goal 2: Create Models in JavaScript with sequelize
-
-##### Demonstrate
-
-- Still an abstraction of SQL
-- Sequelize 
-  - `define`
-  - Error
-  - `sync`
-- Models
-  - findAll
-  - update
-    - opts: fields
-- Seeds
-- Console
-
-##### Questions
-
-##### Check for Understanding
-
-* Kahoot [4-6]
-
-##### Cue
-
-* Now that we have a way to persist and retrieve data, let's expose this data to HTTP with express
-
-
-
 ### Learning Goal 3: Create Controllers in JavaScript with express
 
 ##### Demonstrate
@@ -85,8 +56,6 @@
 * Update
   * params
   * Middleware
-* Asyncronous
-  - `async/await`
 
 ##### Questions
 
