@@ -9,7 +9,7 @@ class App extends React.Component {
     }
 
     componentDidMount(){
-        fetch('http://10.185.7.248:3000/roy-dragons')
+        fetch('http://localhost:3000/roy-dragons')
             .then( res => res.json() )
             .then( dragons => {
                 this.setState({ dragons: dragons })
@@ -17,7 +17,7 @@ class App extends React.Component {
     }
 
     handleSubmit = (dragonName, dragonImage) => {
-        fetch('http://10.185.7.248:3000/roy-dragons', {
+        fetch('http://localhost:3000/roy-dragons', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
