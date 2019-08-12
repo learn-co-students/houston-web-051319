@@ -1,23 +1,19 @@
-# Lecture Title
-
-
-### Resources
-* _
+# Algorithm 
 
 
 ### Learning Goals
 
-* _
-* _
-* _
+* Define an algorithm
+* Calculate O(n) for an algorithm
+* Optimizing an algorithm for O(n)
 
 
 ### Activation
 * 
 
 
-### Learning Goal 1:_
-##### Timestamp: _
+### Learning Goal 1: Define an algorithm
+##### Time: _
 
 ##### Demonstrate
 * 
@@ -28,12 +24,48 @@
 ##### Questions 
 
 ##### Check for Understanding
-* *Kahoot Quiz:* [1-3] 
-* *Self Assessment:* [1-3] 
-* *Think-Pair-Share:* [1-3] 
+* Think Pair Share
+  * Finding an algorithm for a medium problem
 
-##### Cue
-* 
 
-### Conclusion 
-* 
+
+### Learning Goal 2: Calculate O(n) for an algorithm
+
+##### Time: _
+
+##### Demonstrate
+
+- 
+
+##### Vocabulary
+
+- 
+
+##### Questions 
+
+##### Check for Understanding
+
+- Think Pair Share
+  - Finding O(n) for prewritten algorithms
+
+
+
+### Learning Goal 3: Optimizing an algorithm for O(n)
+
+##### Time: _
+
+##### Demonstrate
+
+- Using objects/hashes
+
+##### Vocabulary
+
+- 
+
+##### Questions 
+
+##### Check for Understanding
+
+- Think Pair Share
+  - Optimize the example you wrote in step 1
+
