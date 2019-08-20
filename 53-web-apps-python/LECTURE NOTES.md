@@ -1,13 +1,14 @@
 # Intro to Python
 
+### Resources
+
+* <https://create.kahoot.it/details/intro-to-python/cb7a92a0-3dc2-4c5c-b671-c6497557cda3>
 
 ### Learning Goals
 
 * Recognize basic tools for creating Python Applications
 * Identify and Explain the purpose of Python decorators
 * Recognize Common Python Data Structures
-* Explain what it means for Python to be both dynamically and strongly typed
-
 
 
 ### Activation
@@ -177,55 +178,7 @@ def hello_world():
 
 
 
-### Learning Goal 4: Explain what it means for Python to be both dynamically and strongly typed
-
-##### Timestamp: 0:75
-
-##### Demonstrate
-
-```ruby
-from flask import Flask, jsonify
-app = Flask(__name__)
-
-
-class Thing(dict):
-
-    all = []
-
-    def __init__(self, id):
-        dict.__init__(self)
-        self["id"] = id
-        self.all.append(self) 
-
-thing = Thing(1)
-thing = Thing(2)
-thing = Thing(3)        
-
-@app.route('/')
-def index():
-    return jsonify(Thing.all)
- 
-
-@app.route('/<id>')
-def show(id):
-    for thing in Thing.all:
-        if thing['id'] == int(id):
-            return jsonify(thing)
-
-```
-
-##### Vocabulary
-
-- Dynamically Typed
-- Statically Typed
-- Stongly Typed
-- Weakly Typed
-
-##### Questions 
-
-
-
-### Conclusion 
+### Conclusion
 
 ##### Timestamp 0:85 
 

@@ -1,45 +1,45 @@
 from flask import Flask, jsonify
 app = Flask(__name__)
-# Decorator:
-# def double(func):
-#     def new_function():
-#         func()
-#         func()
-#     return new_function
 
-# @double
-# def hi():
-#     print("Hi")
-
-# hi()
-
-# Objects
-# Hashes -> Dictionary Objects
-# Arrays -> Lists
-
-class Fruit(dict):
+# Food
+class Food(dict):
 
     all = []
+    id_counter = 0
 
-    def __init__(self, id, color):
+    
+    def __init__(self, id, name, price):
         dict.__init__(self)
-        self["id"] = id
-        self["color"] = color
-        self.all.append(self)
+        Food.id_counter = Food.id_counter + 1
+        self["id"]= Food.id_counter
+        self["name"] = name
+        self["price"] = price
+        Food.all.append(self)
 
-bananna = Fruit(1, 'Yellow')
-orange = Fruit(2, 'Orange')
-dragon_fruit = Fruit(3, 'Red')
 
-@app.route('/')
+Food(1, "Taco", 2)
+
+Food(2, "Burger", 20)
+
+# foods = [ 
+#     {
+#         "id": 1,
+#         "name": "Taco",
+#         "price": 2
+#     },
+#     {
+#         "id": 2,
+#         "name": "Burger",
+#         "price": 20
+#     }
+# ]
+
+@app.route('/foods')
 def index():
-    return jsonify(Fruit.all)
+    return jsonify(Food.all)
 
-@app.route('/<id>')
+@app.route('/foods/<id>')
 def show(id):
-    print("ID:")
-    print(id)
-    for fruit in Fruit.all:
-        if(fruit["id"] == int(id)):
-            return jsonify(fruit)
-    return "404"
+    for food in Food.all:
+        if food["id"] == int(id):
+            return jsonify(food)
